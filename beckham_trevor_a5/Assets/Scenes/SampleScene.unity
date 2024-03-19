@@ -506,36 +506,20 @@ MonoBehaviour:
     m_ControlPoints:
     - position: {x: -2.6984005, y: -0.11694197, z: 0}
       leftTangent: {x: -0.97388816, y: -0.93673784, z: 0}
-      rightTangent: {x: 0.2929976, y: 0.28182065, z: 0}
+      rightTangent: {x: 0.11511278, y: 0.11072134, z: 0}
       mode: 1
       height: 0.2
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -1.97, y: 1.4293733, z: 0}
+    - position: {x: 0.19280505, y: 1.6532329, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 0.2
       spriteIndex: 0
       corner: 1
-      m_CornerMode: 1
-    - position: {x: -0.00000007985457, y: 0.00000003739075, z: 0}
-      leftTangent: {x: 0, y: 0, z: 0}
-      rightTangent: {x: 0, y: 0, z: 0}
-      mode: 0
-      height: 0.2
-      spriteIndex: 0
-      corner: 1
-      m_CornerMode: 1
-    - position: {x: 1.1909748, y: 1.5153456, z: 0}
-      leftTangent: {x: 0, y: 0, z: 0}
-      rightTangent: {x: 0, y: 0, z: 0}
-      mode: 0
-      height: 0.2
-      spriteIndex: 0
-      corner: 1
-      m_CornerMode: 1
+      m_CornerMode: 2
     - position: {x: 3.3791955, y: -0.26306978, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
@@ -559,7 +543,7 @@ MonoBehaviour:
   m_AdaptiveUV: 1
   m_StretchUV: 0
   m_WorldSpaceUV: 0
-  m_CornerAngleThreshold: 15.3
+  m_CornerAngleThreshold: 0
   m_ColliderDetail: 16
   m_ColliderOffset: 0
   m_UpdateCollider: 1
@@ -625,8 +609,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 2.5052922, y: 0.61118746, z: 0}
-    m_Extent: {x: 5.4031754, y: 1.0707333, z: 0}
+    m_Center: {x: 2.487006, y: 0.69508135, z: 0}
+    m_Extent: {x: 5.421461, y: 1.1298445, z: 0}
   m_SpriteSortPoint: 0
 --- !u!4 &1843169502
 Transform:
@@ -637,7 +621,7 @@ Transform:
   m_GameObject: {fileID: 1843169499}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.54, y: -2.02, z: 0}
+  m_LocalPosition: {x: -5.29, y: -3.67, z: 0}
   m_LocalScale: {x: 2.2049, y: 1.1971, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
