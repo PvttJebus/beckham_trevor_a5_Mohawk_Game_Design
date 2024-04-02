@@ -60,7 +60,9 @@ public class Lander : MonoBehaviour
         //rg2d.addforce(force)
         //fuel -= Time.deltaTime;
         transform.position += offset * Time.deltaTime;
+        thrust.transform.position = transform.position;
         transform.Rotate(0,0,rotation);
+        thrust.transform.Rotate(0,0,rotation);
 
     }
 }
