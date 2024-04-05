@@ -15,7 +15,7 @@ public class Lander : MonoBehaviour
     Vector2 force;
     public GameObject lander;
     public Rigidbody2D rb;
-    public float fuel = 100f;
+    public float fuel = 100;
     public Text fuelText;
     public Image thrust;
     
@@ -41,11 +41,11 @@ public class Lander : MonoBehaviour
         bool rotateLeft = Input.GetKey(KeyCode.A);
         bool rotateRight = Input.GetKey(KeyCode.D);
 
-        if (upwardThrust)
+        if (upwardThrust && fuel >= 0)
         {
             //offset = transform.up * thrustForce;
             rb.AddForce(force);
-            fuel -= 1 * Time.deltaTime;
+            fuel -= 10.0f * Time.deltaTime;
             thrust.enabled = !thrust.enabled;
             
 
