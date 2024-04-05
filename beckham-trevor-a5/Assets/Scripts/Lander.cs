@@ -32,7 +32,7 @@ public class Lander : MonoBehaviour
     void Update()
     {
         Ground ground = new Ground();
-        fuelText.text = "Fuel: " + fuel;
+        fuelText.text = "Fuel: " + fuel.ToString("0");
         scoreText.text = "Score: " + ground.score;
         Vector3 offset = Vector3.zero;
         force = transform.up * thrustForce;
@@ -45,7 +45,7 @@ public class Lander : MonoBehaviour
         {
             //offset = transform.up * thrustForce;
             rb.AddForce(force);
-            fuel -= 10.0f * Time.deltaTime;
+            fuel -= 5.0f * Time.deltaTime;
             thrust.enabled = !thrust.enabled;
             
 
