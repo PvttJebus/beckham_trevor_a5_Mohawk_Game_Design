@@ -18,7 +18,10 @@ public class Lander : MonoBehaviour
     public float fuel = 100;
     public Text fuelText;
     public Image thrust;
-    
+    public float velocity;
+    public Text gameOverText;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,11 +34,19 @@ public class Lander : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Movement();
+
+    }
+
+
+    public void Movement()
+    {
         Ground ground = new Ground();
         fuelText.text = "Fuel: " + fuel.ToString("0");
         scoreText.text = "Score: " + ground.score;
         Vector3 offset = Vector3.zero;
         force = transform.up * thrustForce;
+        velocity = rb.velocity.magnitude;
 
         bool upwardThrust = Input.GetKey(KeyCode.W);
         bool rotateLeft = Input.GetKey(KeyCode.A);
@@ -45,24 +56,25 @@ public class Lander : MonoBehaviour
         {
             //offset = transform.up * thrustForce;
             rb.AddForce(force);
-            fuel -= 5.0f * Time.deltaTime;
+            fuel -= 1.0f * Time.deltaTime;
             thrust.enabled = !thrust.enabled;
-            
+
+
 
         }
 
         if (rotateLeft)
             rotation += rotationSpeed * Time.deltaTime;
-        
+
         if (rotateRight)
             rotation -= rotationSpeed * Time.deltaTime;
 
-        //rg2d.addforce(force)
-        //fuel -= Time.deltaTime;
+
         transform.position += offset * Time.deltaTime;
         thrust.transform.position = transform.position;
-        transform.Rotate(0,0,rotation);
-        thrust.transform.Rotate(0,0,rotation);
-
+        transform.Rotate(0, 0, rotation);
+        thrust.transform.Rotate(0, 0, rotation);
     }
+
+   
 }
