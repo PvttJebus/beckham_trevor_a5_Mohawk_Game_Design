@@ -12,6 +12,7 @@ public class Lander : MonoBehaviour
     public float thrustForce = 0;
     public float rotationSpeed = 0;
     public float rotation = 0;
+    public Ground ground;
     Vector2 force;
     public GameObject lander;
     public Rigidbody2D rb;
@@ -35,13 +36,13 @@ public class Lander : MonoBehaviour
     void Update()
     {
         Movement();
+        OutOfFuel();
 
     }
 
 
     public void Movement()
     {
-        Ground ground = new Ground();
         fuelText.text = "Fuel: " + fuel.ToString("0");
         scoreText.text = "Score: " + ground.score;
         Vector3 offset = Vector3.zero;
@@ -76,5 +77,13 @@ public class Lander : MonoBehaviour
         thrust.transform.Rotate(0, 0, rotation);
     }
 
-   
+
+    public void OutOfFuel()
+    {
+        if (fuel == 0)
+        {
+            gameOverText.text = "The lander has ran out of fuel, hopefully the crew survives the impact" + "\n\n" + "Game Over";
+        }
+    }
+
 }

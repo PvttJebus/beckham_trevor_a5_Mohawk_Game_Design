@@ -547,7 +547,7 @@ Transform:
   m_GameObject: {fileID: 622581955}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalPosition: {x: 0, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -569,6 +569,9 @@ MonoBehaviour:
   pointsValue: 100
   pointsMultiplier: 1
   gameOverText: {fileID: 506605285}
+  lander: {fileID: 2936475117764228207}
+  lunarLander: {fileID: 2936475117764228205}
+  safeLandingSpeed: 5.2
 --- !u!60 &622581958
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -617,32 +620,34 @@ PolygonCollider2D:
       - {x: -25.731264, y: -3.8810368}
       - {x: -25.826069, y: 14.61231}
       - {x: -25.068851, y: 14.687152}
-      - {x: -21.139048, y: 1.9756941}
+      - {x: -21.193666, y: 2.2570686}
       - {x: -12.969554, y: 2.2395573}
+      - {x: -10.657439, y: 12.078652}
       - {x: -10.221574, y: 13.13343}
-      - {x: -10.100336, y: 6.4413786}
-      - {x: -6.723522, y: 7.072413}
-      - {x: -6.7313614, y: 13.133452}
-      - {x: -4.24436, y: 23.147295}
-      - {x: -3.3629947, y: 23.240763}
-      - {x: -2.4884667, y: 6.045616}
+      - {x: -10.04877, y: 7.579872}
+      - {x: -6.6032, y: 7.4519095}
+      - {x: -6.5841427, y: 13.025107}
+      - {x: -4.1507497, y: 23.147295}
+      - {x: -3.4683058, y: 23.240763}
+      - {x: -2.3900204, y: 6.6542}
       - {x: -2.4983547, y: -2.1748385}
       - {x: 0.5391078, y: -2.1035776}
-      - {x: 0.27754283, y: 5.602815}
+      - {x: 0.10033904, y: 6.2113986}
       - {x: 1.9785329, y: 22.695595}
-      - {x: 3.0127618, y: 22.758352}
-      - {x: 5.1949253, y: 3.4431336}
-      - {x: 8.690601, y: 3.425187}
-      - {x: 11.18066, y: 7.860309}
-      - {x: 12.760738, y: 12.556769}
-      - {x: 13.158169, y: 13.941014}
-      - {x: 14.917297, y: 23.437502}
+      - {x: 2.835558, y: 22.932234}
+      - {x: 5.0177217, y: 3.182312}
+      - {x: 8.774229, y: 3.1790125}
+      - {x: 11.264287, y: 7.9218526}
+      - {x: 12.978874, y: 11.6981125}
+      - {x: 13.48957, y: 13.716348}
+      - {x: 15.180562, y: 23.719826}
       - {x: 15.238474, y: 17.119234}
       - {x: 18.135881, y: 17.037199}
-      - {x: 18.409557, y: 22.909721}
+      - {x: 18.179916, y: 23.934465}
       - {x: 19.981918, y: 6.024255}
       - {x: 20.275427, y: 0.47553682}
       - {x: 23.439865, y: 0.4810109}
+      - {x: 23.420383, y: 6.167372}
       - {x: 23.738775, y: 6.8993077}
       - {x: 24.353542, y: -3.8614929}
       - {x: -2.662703, y: -4.0902095}
@@ -1978,6 +1983,9 @@ MonoBehaviour:
   pointsValue: 0
   pointsMultiplier: 0
   gameOverText: {fileID: 0}
+  lander: {fileID: 0}
+  lunarLander: {fileID: 0}
+  safeLandingSpeed: 0
 --- !u!1001 &1799070826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2256,6 +2264,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3332124426892820368, guid: b4c197e677f730a44b1b0e266c3628c5, type: 3}
   m_PrefabInstance: {fileID: 5259361739116452105}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2936475117764228207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 760156587652014719, guid: b4c197e677f730a44b1b0e266c3628c5, type: 3}
+  m_PrefabInstance: {fileID: 5259361739116452105}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2936475117764228205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fba27dcfbdb367d45b9c736997da49a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5259361739116452105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2264,6 +2283,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 760156587652014719, guid: b4c197e677f730a44b1b0e266c3628c5, type: 3}
+      propertyPath: ground
+      value: 
+      objectReference: {fileID: 622581957}
     - target: {fileID: 760156587652014719, guid: b4c197e677f730a44b1b0e266c3628c5, type: 3}
       propertyPath: thrust
       value: 
@@ -2394,7 +2417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3517150184650344215, guid: b4c197e677f730a44b1b0e266c3628c5, type: 3}
       propertyPath: m_GravityScale
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5148147366354436945, guid: b4c197e677f730a44b1b0e266c3628c5, type: 3}
       propertyPath: m_Pivot.x
