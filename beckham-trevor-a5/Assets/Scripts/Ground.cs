@@ -13,6 +13,7 @@ public class Ground : MonoBehaviour
     public Lander lander;
     public GameObject lunarLander;
     public float safeLandingSpeed;
+    public Vector3 beginningRotation;
 
 
     // Update is called once per frame
@@ -24,9 +25,6 @@ public class Ground : MonoBehaviour
         if (lander.fuel != 0)
         {
             gameOverText.text = "Landing successful. One small step for man, one giant leap for mankind!" + "\n\n" + "There is still fuel left, press R to reset and get more points!";
-            bool rKeyPressed = Input.GetKey(KeyCode.R);
-
-            
         }
 
         else
@@ -41,8 +39,8 @@ public class Ground : MonoBehaviour
 
         Rigidbody2D rg2d = lunarLander.GetComponent<Rigidbody2D>();
         rg2d.position = new Vector3(-18.3600006f, 11.6099997f, 1.78970003f);
-        //lander.transform.Rotate += Vector3 (0, 0, 0);
-            gameOverText.text = "";
+        lander.transform.Rotate(beginningRotation);
+        gameOverText.text = "";
         
     }
 }
