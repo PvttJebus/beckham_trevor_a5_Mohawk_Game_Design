@@ -13,4 +13,6 @@ public class Teleport : MonoBehaviour
     { 
         lander.transform.position = teleportLocation;
     }
+
+    
 }

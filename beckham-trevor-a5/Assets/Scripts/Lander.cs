@@ -33,10 +33,11 @@ public class Lander : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Movement();
         OutOfFuel();
+        Reset();
 
     }
 
@@ -86,4 +87,18 @@ public class Lander : MonoBehaviour
         }
     }
 
+
+    public void Reset()
+    {
+        if (Input.GetKey(KeyCode.R))
+            {
+            Debug.Log("R Key was Pressed");
+            ground.GameRestart();
+        }
+
+            
+        
+    }
 }
+
+

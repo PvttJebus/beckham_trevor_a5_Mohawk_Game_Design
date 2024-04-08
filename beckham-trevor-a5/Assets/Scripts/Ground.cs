@@ -19,17 +19,30 @@ public class Ground : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collider)
     {
         Debug.Log($"landing velocity {lander.velocity} - safe landing speed {safeLandingSpeed}");
-        if (lander.velocity <= safeLandingSpeed)
+        score += (pointsValue * pointsMultiplier);
+
+        if (lander.fuel != 0)
         {
-            score += (pointsValue * pointsMultiplier);
-            gameOverText.text = "Landing successful. One small step for man, one giant leap for mankind!";
+            gameOverText.text = "Landing successful. One small step for man, one giant leap for mankind!" + "\n\n" + "There is still fuel left, press R to reset and get more points!";
+            bool rKeyPressed = Input.GetKey(KeyCode.R);
+
+            
         }
 
-        //if (lander.velocity > safeLandingSpeed)
         else
         {
-            gameOverText.text = "The lander hit the ground too fast, it's been damaged beyond repair" + "\n\n" + "Game Over";
-            lunarLander.SetActive(false);
+            gameOverText.text = "Landing successful. One small step for man, one giant leap for mankind!" + "\n\n" + $"Fuel reserves depleted, you achieved {score}";
         }
+    }
+
+   
+    public void GameRestart()
+    {
+
+        Rigidbody2D rg2d = lunarLander.GetComponent<Rigidbody2D>();
+        rg2d.position = new Vector3(-18.3600006f, 11.6099997f, 1.78970003f);
+        //lander.transform.Rotate += Vector3 (0, 0, 0);
+            gameOverText.text = "";
+        
     }
 }
