@@ -9,11 +9,11 @@ using UnityEngine.UI;
 public class Lander : MonoBehaviour
 {
     public Text scoreText;
+    public Text velocityText;
     public float thrustForce = 0;
     public float rotationSpeed = 0;
     public float rotation = 0;
     public Ground ground;
-    public Score score;
     Vector2 force;
     public GameObject lander;
     public Rigidbody2D rb;
@@ -22,6 +22,7 @@ public class Lander : MonoBehaviour
     public Image thrust;
     public float velocity;
     public Text gameOverText;
+    public bool landerIsActive = true;
 
 
 
@@ -36,18 +37,24 @@ public class Lander : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (landerIsActive)
+        {
+            Movement();
+            OutOfFuel();
+        }
 
-        Movement();
-        OutOfFuel();
+        
         Reset();
-        score.DisplayScore();
 
+        fuelText.text = "Fuel: " + fuel.ToString("0");
+        scoreText.text = "Score: " + ground.score.ToString();
+        velocityText.text = "Velocity: " + velocity.ToString("0.00");
     }
 
 
     public void Movement()
     {
-        fuelText.text = "Fuel: " + fuel.ToString("0");
+        
         Vector3 offset = Vector3.zero;
         force = transform.up * thrustForce;
         velocity = rb.velocity.magnitude;
@@ -60,7 +67,7 @@ public class Lander : MonoBehaviour
         {
             //offset = transform.up * thrustForce;
             rb.AddForce(force);
-            fuel -= 1.0f * Time.deltaTime;
+            fuel -= 1.5f * Time.deltaTime;
             thrust.enabled = !thrust.enabled;
 
         }
@@ -81,9 +88,9 @@ public class Lander : MonoBehaviour
 
     public void OutOfFuel()
     {
-        if (fuel == 0)
+        if (fuel <= 0)
         {
-            gameOverText.text = "The lander has ran out of fuel, hopefully the crew survives the impact" + "\n\n" + "Game Over";
+            gameOverText.text = "The lander has ran out of fuel,";
         }
     }
 
@@ -94,6 +101,7 @@ public class Lander : MonoBehaviour
         {
             Debug.Log("R Key was Pressed");
             ground.GameRestart();
+            landerIsActive = true;
         }
     }
 }
