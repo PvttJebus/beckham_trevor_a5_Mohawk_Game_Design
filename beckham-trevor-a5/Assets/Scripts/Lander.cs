@@ -37,15 +37,15 @@ public class Lander : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //Found out if you make this if loop a while loop, it'll make you think you broke your computer...
         if (landerIsActive)
         {
             Movement();
             OutOfFuel();
         }
 
-        
         Reset();
-
+        //I originally had these on the ground script, but found it wasn't updating. Likely because I didn't think to add the update function to that script. Live and learn.
         fuelText.text = "Fuel: " + fuel.ToString("0");
         scoreText.text = "Score: " + ground.score.ToString();
         velocityText.text = "Velocity: " + velocity.ToString("0.00");
@@ -54,9 +54,11 @@ public class Lander : MonoBehaviour
 
     public void Movement()
     {
-        
         Vector3 offset = Vector3.zero;
         force = transform.up * thrustForce;
+
+        /*THIS LINE OF CODE MAN... I was rackin my brain trying to understand how to track the downward velocity, 
+         * just goes to show how complex Unity and how long it's been since I've thought about math stuff*/
         velocity = rb.velocity.magnitude;
 
         bool upwardThrust = Input.GetKey(KeyCode.W);
@@ -77,7 +79,6 @@ public class Lander : MonoBehaviour
 
         if (rotateRight)
             rotation -= rotationSpeed * Time.deltaTime;
-
 
         transform.position += offset * Time.deltaTime;
         thrust.transform.position = transform.position;
@@ -106,6 +107,8 @@ public class Lander : MonoBehaviour
     }
 }
 
+/* The code graveyard... tho this case was because I thought I was gonna bork the script so I copied it all then held Ctrl-Z to revert all changes to the original state.
+ * So the below is a backup for future outdated code I guess. */
 
 //public class Lander : MonoBehaviour
 //{

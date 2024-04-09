@@ -12,9 +12,13 @@ public class multiply : MonoBehaviour
     public float safeLandingSpeed;
     public int pointValue;
     public int pointMultiplier;
+
+    /*As mentioned, the only real diference between this and ground is that the score is tracked on the ground script. This how I was best able to get the multipliers to work*/
+
     public void OnTriggerEnter2D(Collider2D collider)
     {
         Debug.Log($"landing velocity {lander.velocity} - safe landing speed {safeLandingSpeed}");
+        //To stop the score from going up as the lander rolled aroudn the screen if it was tilted, I added a bool check to make sure it hasn't already scored. 
         if (lander.landerIsActive)
         {
             ground.score += (pointValue * pointMultiplier);

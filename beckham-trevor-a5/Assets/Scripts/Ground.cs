@@ -13,10 +13,11 @@ public class Ground : MonoBehaviour
     public Lander lander;
     public GameObject lunarLander;
     public float safeLandingSpeed;
-    public Vector3 beginningRotation;
+    //public Vector3 beginningRotation;
 
 
-    // Update is called once per frame
+    /*My original intent was to have all of the ground multiplication and such on one script, but after trying to break score off and breaking things
+     I decided to just create two cripts, one for score & "Normal" ground and another for the multipliers.*/
     public void OnTriggerEnter2D(Collider2D collider)
     {
         Debug.Log($"landing velocity {lander.velocity} - safe landing speed {safeLandingSpeed}");
@@ -49,10 +50,12 @@ public class Ground : MonoBehaviour
     public void GameRestart()
     {
 
-
+        /* So this is my attempt at a quick restart, and it works... almosty perfectly.
+         * The big issue is that even after trying to reset the rotation of the lander upon restart, it wouldn't revert back to the starting point, I tried a few different methods for this. 
+         * So now, the extra rotation on retries is just a totally intentional difficulty spike to make the next attempts harder!*/
         Rigidbody2D rg2d = lunarLander.GetComponent<Rigidbody2D>();
         rg2d.position = new Vector3(-18.3600006f, 11.6099997f, 1.78970003f);
-        lander.transform.Rotate(beginningRotation);
+        //lander.transform.Rotate(beginningRotation);
         gameOverText.text = "";
 
     }

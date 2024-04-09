@@ -641,7 +641,6 @@ MonoBehaviour:
   lander: {fileID: 2936475117764228207}
   lunarLander: {fileID: 2936475117764228205}
   safeLandingSpeed: 3
-  beginningRotation: {x: 0, y: 0, z: 0}
 --- !u!60 &622581958
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1844,6 +1843,10 @@ PrefabInstance:
       propertyPath: m_PixelPerfect
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4761278136358318235, guid: 1080bc37cbad9864185fa486fe9de1e1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6831330313685531592, guid: 1080bc37cbad9864185fa486fe9de1e1, type: 3}
       propertyPath: m_Name
       value: Multiplier Text
@@ -2597,6 +2600,10 @@ PrefabInstance:
       propertyPath: m_PixelPerfect
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4761278136358318235, guid: 1080bc37cbad9864185fa486fe9de1e1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6831330313685531592, guid: 1080bc37cbad9864185fa486fe9de1e1, type: 3}
       propertyPath: m_Name
       value: Multiplier Text
@@ -2708,6 +2715,10 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 1603073068269121602, guid: 1080bc37cbad9864185fa486fe9de1e1, type: 3}
       propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761278136358318235, guid: 1080bc37cbad9864185fa486fe9de1e1, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6831330313685531592, guid: 1080bc37cbad9864185fa486fe9de1e1, type: 3}
@@ -3152,6 +3163,10 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 1603073068269121602, guid: 1080bc37cbad9864185fa486fe9de1e1, type: 3}
       propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761278136358318235, guid: 1080bc37cbad9864185fa486fe9de1e1, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6831330313685531592, guid: 1080bc37cbad9864185fa486fe9de1e1, type: 3}
