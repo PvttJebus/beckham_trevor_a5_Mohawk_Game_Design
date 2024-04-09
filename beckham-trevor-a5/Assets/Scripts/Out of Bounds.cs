@@ -9,7 +9,9 @@ public class OutofBounds : MonoBehaviour
     public Text oobText;
     public GameObject lunarLander;
 
-    // Start is called before the first frame update
+    /*This idea came while I was building the teleporters. 
+     Since it wouldn't make sense for the player to teleport down, nore for there to be a roof to a planet
+     I made it possible for the player to fling their astronauts out into the void, left to float in the black forever*/
     private void OnTriggerEnter2D(Collider2D other)
     {
         lunarLander.SetActive(false);
