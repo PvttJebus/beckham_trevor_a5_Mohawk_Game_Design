@@ -140,13 +140,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd006951818f9f4db49312eb6d333c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  pointsValue: 100
-  pointsMultiplier: 3
+  pointValue: 100
+  pointMultiplier: 3
   gameOverText: {fileID: 506605285}
   lander: {fileID: 2936475117764228207}
   lunarLander: {fileID: 2936475117764228205}
   safeLandingSpeed: 5
+  beginningRotation: {x: 0, y: 0, z: 0}
 --- !u!61 &390321247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -634,13 +634,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd006951818f9f4db49312eb6d333c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  pointsValue: 100
-  pointsMultiplier: 1
+  pointValue: 100
+  pointMultiplier: 1
   gameOverText: {fileID: 506605285}
   lander: {fileID: 2936475117764228207}
   lunarLander: {fileID: 2936475117764228205}
   safeLandingSpeed: 5.2
+  beginningRotation: {x: 0, y: 0, z: 0}
 --- !u!60 &622581958
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1100,13 +1100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd006951818f9f4db49312eb6d333c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  pointsValue: 100
-  pointsMultiplier: 5
+  pointValue: 100
+  pointMultiplier: 5
   gameOverText: {fileID: 506605285}
   lander: {fileID: 2936475117764228207}
   lunarLander: {fileID: 2936475117764228205}
   safeLandingSpeed: 5
+  beginningRotation: {x: 0, y: 0, z: 0}
 --- !u!61 &927574425
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1203,13 +1203,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd006951818f9f4db49312eb6d333c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  pointsValue: 100
-  pointsMultiplier: 2
+  pointValue: 100
+  pointMultiplier: 2
   gameOverText: {fileID: 506605285}
   lander: {fileID: 2936475117764228207}
   lunarLander: {fileID: 2936475117764228205}
   safeLandingSpeed: 5
+  beginningRotation: {x: 0, y: 0, z: 0}
 --- !u!222 &991639769
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1807,29 +1807,29 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -2.662703, y: -4.0902095}
-      - {x: -25.731264, y: -3.8810368}
+      - {x: -25.731262, y: -3.8810368}
       - {x: -25.676662, y: 13.556753}
       - {x: -25.188377, y: 13.631599}
       - {x: -21.258574, y: 1.25}
-      - {x: -12.8799095, y: 1.2499757}
+      - {x: -12.879916, y: 1.2499523}
       - {x: -10.400863, y: 11.484121}
-      - {x: -6.5520735, y: 11.484145}
-      - {x: -4.0800133, y: 22.15771}
+      - {x: -6.5520782, y: 11.484125}
+      - {x: -4.0800133, y: 22.157711}
       - {x: -3.5871038, y: 22.119232}
       - {x: -2.2655034, y: 3.7397966}
       - {x: -0.09291732, y: 3.7397938}
       - {x: 2.2175846, y: 21.837955}
       - {x: 2.7139487, y: 21.834738}
-      - {x: 4.9409337, y: 2.3875763}
-      - {x: 8.86989, y: 2.1717143}
+      - {x: 4.940933, y: 2.3875763}
+      - {x: 8.869856, y: 2.171647}
       - {x: 11.359949, y: 6.8707237}
       - {x: 13.328484, y: 11.105381}
       - {x: 13.397219, y: 11.566013}
       - {x: 15.20117, y: 22.25}
-      - {x: 18.215328, y: 22.25}
+      - {x: 18.215347, y: 22.25}
       - {x: 19.892885, y: 5.25}
-      - {x: 23.79854, y: 5.25}
-      - {x: 24.353542, y: -3.8614929}
+      - {x: 23.798561, y: 5.25}
+      - {x: 24.353542, y: -3.8614964}
       - {x: -2.662703, y: -4.0902095}
   m_UseDelaunayMesh: 0
 --- !u!114 &1389520162
@@ -2025,29 +2025,29 @@ MonoBehaviour:
   m_Modifiers: []
   m_ColliderSegment:
   - {x: -2.662703, y: -4.0902095}
-  - {x: -25.731264, y: -3.8810368}
+  - {x: -25.731262, y: -3.8810368}
   - {x: -25.676662, y: 13.556753}
   - {x: -25.188377, y: 13.631599}
   - {x: -21.258574, y: 1.25}
-  - {x: -12.8799095, y: 1.2499757}
+  - {x: -12.879916, y: 1.2499523}
   - {x: -10.400863, y: 11.484121}
-  - {x: -6.5520735, y: 11.484145}
-  - {x: -4.0800133, y: 22.15771}
+  - {x: -6.5520782, y: 11.484125}
+  - {x: -4.0800133, y: 22.157711}
   - {x: -3.5871038, y: 22.119232}
   - {x: -2.2655034, y: 3.7397966}
   - {x: -0.09291732, y: 3.7397938}
   - {x: 2.2175846, y: 21.837955}
   - {x: 2.7139487, y: 21.834738}
-  - {x: 4.9409337, y: 2.3875763}
-  - {x: 8.86989, y: 2.1717143}
+  - {x: 4.940933, y: 2.3875763}
+  - {x: 8.869856, y: 2.171647}
   - {x: 11.359949, y: 6.8707237}
   - {x: 13.328484, y: 11.105381}
   - {x: 13.397219, y: 11.566013}
   - {x: 15.20117, y: 22.25}
-  - {x: 18.215328, y: 22.25}
+  - {x: 18.215347, y: 22.25}
   - {x: 19.892885, y: 5.25}
-  - {x: 23.79854, y: 5.25}
-  - {x: 24.353542, y: -3.8614929}
+  - {x: 23.798561, y: 5.25}
+  - {x: 24.353542, y: -3.8614964}
   - {x: -2.662703, y: -4.0902095}
 --- !u!1971053207 &1389520163
 SpriteShapeRenderer:
@@ -2286,13 +2286,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd006951818f9f4db49312eb6d333c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  pointsValue: 100
-  pointsMultiplier: 10
+  pointValue: 100
+  pointMultiplier: 10
   gameOverText: {fileID: 506605285}
   lander: {fileID: 2936475117764228207}
   lunarLander: {fileID: 2936475117764228205}
   safeLandingSpeed: 5
+  beginningRotation: {x: 0, y: 0, z: 0}
 --- !u!61 &1518057619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2639,6 +2639,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba27dcfbdb367d45b9c736997da49a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2936475117764228212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2936475117764228205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c52c976cafe9664089534dab19c9961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 423552847}
+  score: 0
 --- !u!1001 &5259361739116452105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2647,6 +2661,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 760156587652014719, guid: b4c197e677f730a44b1b0e266c3628c5, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 2936475117764228212}
     - target: {fileID: 760156587652014719, guid: b4c197e677f730a44b1b0e266c3628c5, type: 3}
       propertyPath: ground
       value: 
@@ -2667,6 +2685,10 @@ PrefabInstance:
       propertyPath: thrustForce
       value: 1.32
       objectReference: {fileID: 0}
+    - target: {fileID: 760156587652014719, guid: b4c197e677f730a44b1b0e266c3628c5, type: 3}
+      propertyPath: gameOverText
+      value: 
+      objectReference: {fileID: 506605285}
     - target: {fileID: 1510413671543315242, guid: b4c197e677f730a44b1b0e266c3628c5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2850,7 +2872,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3332124426892820368, guid: b4c197e677f730a44b1b0e266c3628c5, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 2936475117764228212}
   m_SourcePrefab: {fileID: 100100000, guid: b4c197e677f730a44b1b0e266c3628c5, type: 3}
 --- !u!1001 &6695191924337657189
 PrefabInstance:
